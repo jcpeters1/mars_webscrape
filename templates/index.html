@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p>It's red, but it's not hot.</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <h3>The latest news on NASA's website:</h3>
+    <h4>{{ mars.news[0] }}</h4>
+    <h5>{{ mars.news[1] }}</h5>
+  </div>
+
+  <div class="col-md-8">
+    <h3>Featured Mars Image</h3>
+    <img src={{ mars.featured_img_url }} alt='featured image on NASA website' style="width:800px;height:auto;">
+  </div class_="col-md-8">
+  <div class_="col-md-3">
+    <h3>Mars facts:</h3>
+    <hr>
+    <table class_='table'>
+    {{ mars.fact_table | safe }}
+    </table>
+  </div  class_="col-md-3">
+  <br>
+
+  <div class_="row">
+    <div class="col-md-6">
+      <h4>{{ mars.hemisphere_imgs[0].title }}</h4>
+      <img src={{ mars.hemisphere_imgs[0].img_url }} alt='image' style="width:500px;height:auto;">
+    </div>
+    <div class="col-md-6">
+      <h4>{{ mars.hemisphere_imgs[1].title }}</h4>
+      <img src={{ mars.hemisphere_imgs[1].img_url }} alt='image' style="width:500px;height:auto;">
+    </div>
+    <div class="col-md-6">
+      <h4>{{ mars.hemisphere_imgs[2].title }}</h4>
+      <img src={{ mars.hemisphere_imgs[2].img_url }} alt='image' style="width:500px;height:auto;">
+    </div>
+    <div class="col-md-6">
+      <h4>{{ mars.hemisphere_imgs[3].title }}</h4>
+      <img src={{ mars.hemisphere_imgs[3].img_url }} alt='image' style="width:500px;height:auto;">
+    </div>
+  </div>
+
+</body>
+
+</html>
