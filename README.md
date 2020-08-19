@@ -1,4 +1,4 @@
-## NASA Webscraping
+## Mars Webscraping
 
 Webpage that scrapes websites from NASA Mars News Site, JPL Featured Space Image and Space Facts.
 
